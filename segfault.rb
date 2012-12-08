@@ -9,12 +9,12 @@ require 'sinatra';
 
 class SegFault < Sinatra::Base
 
+	set :static, true
+	set :public_folder, File.dirname("SegFault") + '/static'
+
 	#some code that runs when the root route ('/') is touched using the GET method. This is an example
 	#get '/' do 
 	#	'Hello World! I\'m in another file.'
 	#end
-
-	set :static, true
-	set :public_folder, File.dirname("SegFault") + '/static'
 
 end
